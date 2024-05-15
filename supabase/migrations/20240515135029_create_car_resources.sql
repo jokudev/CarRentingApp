@@ -3,6 +3,7 @@
 create table public.cars (
   id bigint primary key generated always as identity,
   brand text,
+  model text,
   type text,
   picture_url text,
   status int not null default 1

@@ -1,16 +1,14 @@
-insert into public.cars (brand, type, picture_url) values
-  ('Toyota', 'SUV', ''),
-  ('Ford', 'Sedan', ''),
-  ('Chevrolet', 'Truck', ''),
-  ('Honda', 'SUV', ''),
-  ('Toyota', 'Sedan', ''),
-  ('Ford', 'Truck', ''),
-  ('Chevrolet', 'SUV', ''),
-  ('Honda', 'Sedan', ''),
-  ('Toyota', 'Truck', ''),
-  ('Ford', 'SUV', ''),
-  ('Chevrolet', 'Sedan', ''),
-  ('Honda', 'Truck', '');
+insert into public.cars (brand, type, model) values
+  ('Toyota', 'Sedan', 'Camry'),
+  ('Honda', 'SUV', 'CR-V'),
+  ('Ford', 'Truck', 'F-150'),
+  ('Chevrolet', 'SUV', 'Tahoe'),
+  ('Jeep', 'SUV', 'Wrangler'),
+  ('Tesla', 'Sedan', 'Model S'),
+  ('Mercedes-Benz', 'SUV', 'GLC'),
+  ('BMW', 'Sedan', '3 Series'),
+  ('Audi', 'Sedan', 'A4'),
+  ('Subaru', 'SUV', 'Outback');
 
---insert into public.profiles (id, username, full_name, avatar_url, is_admin, status) values
---('00000000-0000-0000-0000-000000000000', 'admin', 'Admin', '', true, 1);
+--insert into public.profiles (id, full_name, avatar_url, is_admin, status) values
+--('85fa92cf-affc-4a60-8281-3be7c8f39b72', 'Joshua Kunz', 'https://avatars.githubusercontent.com/u/166611085?v=4', false, 1);
