@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand navbar-light bg-light px-2">
+  <a class="navbar-brand" href="#">CarRentingApp</a>
+  <div class="navbar-collapse">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Features</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Pricing</a>
+      </li>
+    </ul>
+  </div>
+  <div class="navbar-nav ml-auto">
+    <div *ngIf="profile">
+      <div ngbDropdown class="nav-item">
+        <a class="nav-link dropdown-toggle d-flex align-items-center" id="navbarDropdown" ngbDropdownToggle role="button">
+          <img src="{{ profile?.avatar_url }}" class="rounded-circle mr-2" width="40" height="40" alt="User Avatar">
+          <span>{{ profile?.full_name }}</span>
+        </a>
+        <div ngbDropdownMenu aria-labelledby="navbarDropdown">
+          <button class="dropdown-item" (click)="signOut()" type="button">Sign Out</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
