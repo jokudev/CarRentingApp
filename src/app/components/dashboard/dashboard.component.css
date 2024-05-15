@@ -1,0 +1,25 @@
+.scrolling-wrapper-flexbox {
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.car-card {
+  min-width: 300px;
+  /* Set a minimum width for the card */
+  margin: 0 10px;
+  /* Add margin to the cards */
+}
+
+.tag {
+  padding: 0.25em 0.5em;
+  font-size: 0.8em;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  background-color: #717171;
+  border-radius: 0.25em;
+  width: min-content;
+  margin-top: 1em;
+  margin-bottom: 0;
+}
