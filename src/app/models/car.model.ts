@@ -3,6 +3,6 @@ export interface Car {
   brand: string;
   model: string;
   type: string;
-  pictureUrl: string;
+  picture_url: string;
   status: number;
 }

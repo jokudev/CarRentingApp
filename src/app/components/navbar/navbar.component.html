@@ -1,9 +1,9 @@
-<nav class="navbar navbar-expand navbar-light bg-light px-2">
+<nav class="navbar navbar-expand navbar-light bg-light px-2 py-0">
   <a class="navbar-brand" href="#">CarRentingApp</a>
   <div class="navbar-collapse">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="/dashboard">Dashboard</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Features</a>
@@ -21,6 +21,7 @@
             <span>{{ profile.full_name }}</span>
         </a>
         <div ngbDropdownMenu aria-labelledby="navbarDropdown">
+          <button class="dropdown-item" *ngIf="userIsAdmin()" (click)="clickAdminDashboard()" type="button">Admin Dashboard</button>
           <button class="dropdown-item" (click)="signOut()" type="button">Sign Out</button>
         </div>
       </div>

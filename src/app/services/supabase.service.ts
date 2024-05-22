@@ -15,4 +15,24 @@ export class SupabaseService {
   getClient(): SupabaseClient {
     return this.supabase;
   }
+
+  async signInWithGithub() {
+    if (environment.supabaseCallbackUrl.length !== 0) {
+      await this.supabase.auth.signInWithOAuth({
+        provider: 'github',
+        options: {
+          redirectTo: environment.supabaseCallbackUrl
+        }
+      });
+
+      return;
+    }
+    else {
+      await this.supabase.auth.signInWithOAuth({
+        provider: 'github'
+      });
+
+      return;
+    }
+  }
 }

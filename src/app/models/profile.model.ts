@@ -4,6 +4,6 @@ export interface Profile {
   username: string;
   full_name: string;
   avatar_url: string;
-  isAdmin: boolean;
+  is_admin: boolean;
   status: number;
 }

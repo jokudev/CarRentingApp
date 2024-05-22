@@ -8,12 +8,12 @@
       <p>My Cars:</p>
       <div class="scrolling-wrapper-flexbox">
         <ul class="list-unstyled d-flex flex-nowrap">
-          <li *ngFor="let car of getCars()" class="mr-3">
+          <li *ngFor="let car of cars" class="mr-3">
             <div class="card car-card">
               <div class="card-body">
                 <div class="row">
                   <div class="col-md-4">
-                    <img [src]="car.pictureUrl" alt="car" class="img-fluid">
+                    <img [src]="car.picture_url" alt="car" class="img-fluid">
                   </div>
                   <div class="col-md-8">
                     <h2>{{ car.brand }}</h2>

@@ -12,7 +12,7 @@ export class AuthService {
 
   private user = new BehaviorSubject<User | null>(null);
 
-  constructor(private supabaseService: SupabaseService, private router: Router, private ngZone: NgZone){
+  constructor(private supabaseService: SupabaseService, private router: Router, private ngZone: NgZone) {
     this.supabase.auth.onAuthStateChange((event, session) => {
       this.user.next(session?.user ?? null);
     });
@@ -23,9 +23,7 @@ export class AuthService {
   }
 
   async signInWithGithub() {
-    await this.supabase.auth.signInWithOAuth({
-      provider: 'github'
-    });
+    await this.supabaseService.signInWithGithub();
   }
 
   async signOut() {
